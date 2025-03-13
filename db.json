@@ -57,32 +57,6 @@
       "id": 6
     }
   ],
-  "courses": [
-    {
-      "id": 1,
-      "courseName": "JS Cơ bản update",
-      "views": 20,
-      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Javascript.jpg",
-      "note": "",
-      "category": "Javascript"
-    },
-    {
-      "id": 2,
-      "courseName": "PHP Cơ bản",
-      "views": 29,
-      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTef5lOqn3-0aRjvM19iJy-lAknXy3vSH1OfA&s",
-      "note": "",
-      "category": "PHP"
-    },
-    {
-      "id": 3,
-      "courseName": "Khóa học 1",
-      "views": 100,
-      "thumbnail": "https://picsum.photos/200/200",
-      "note": "Ghi chú",
-      "category": "C++"
-    }
-  ],
   "users": [
     {
       "dob": "2004-06-20",
