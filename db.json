@@ -1,0 +1,116 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "title": "Gậy Bida Mezz Ignite",
+      "description": "Gậy bida Mezz Ignite sử dụng công nghệ Carbon tiên tiến, độ chính xác cao.",
+      "price": 9200,
+      "discountPercentage": 8,
+      "rating": 4.8,
+      "stock": 10,
+      "brand": "Mezz",
+      "category": "Gậy bình dân",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWy1rqvRgUzcVKWcQftEh53cSvcaet_R74oQ&s"
+    },
+    {
+      "id": 2,
+      "title": "Gậy Bida Mezz Ignite",
+      "description": "Gậy bida Mezz Ignite sử dụng công nghệ Carbon tiên tiến, độ chính xác cao.",
+      "price": 9200,
+      "discountPercentage": 8,
+      "rating": 4.8,
+      "stock": 10,
+      "brand": "Mezz",
+      "category": "billiard-cues",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWy1rqvRgUzcVKWcQftEh53cSvcaet_R74oQ&s"
+    },
+    {
+      "title": "Gậy Bida ",
+      "price": "92009",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWy1rqvRgUzcVKWcQftEh53cSvcaet_R74oQ&s",
+      "description": "Gậy bida Mezz Ignite ",
+      "category": "smartphones",
+      "id": 3
+    },
+    {
+      "title": "Gậy Bida ",
+      "price": "92009",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWy1rqvRgUzcVKWcQftEh53cSvcaet_R74oQ&s",
+      "description": "Gậy bida Mezz Ignite ",
+      "category": "fragrances",
+      "id": 4
+    },
+    {
+      "title": "Gậy Bida Mezz Ignite",
+      "price": "9200",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWy1rqvRgUzcVKWcQftEh53cSvcaet_R74oQ&s",
+      "description": "Gậy bida Mezz Ignite sử dụng công nghệ Carbon tiên tiến, độ chính xác cao.",
+      "category": "smartphones",
+      "id": 5
+    },
+    {
+      "title": "Gậy Bida Mezz Ignite",
+      "price": "9200",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWy1rqvRgUzcVKWcQftEh53cSvcaet_R74oQ&s",
+      "description": "Gậy bida Mezz Ignite sử dụng công nghệ Carbon tiên tiến, độ chính xác cao.",
+      "category": "Gậy bình dân",
+      "id": 6
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "courseName": "JS Cơ bản update",
+      "views": 20,
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Javascript.jpg",
+      "note": "",
+      "category": "Javascript"
+    },
+    {
+      "id": 2,
+      "courseName": "PHP Cơ bản",
+      "views": 29,
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTef5lOqn3-0aRjvM19iJy-lAknXy3vSH1OfA&s",
+      "note": "",
+      "category": "PHP"
+    },
+    {
+      "id": 3,
+      "courseName": "Khóa học 1",
+      "views": 100,
+      "thumbnail": "https://picsum.photos/200/200",
+      "note": "Ghi chú",
+      "category": "C++"
+    }
+  ],
+  "users": [
+    {
+      "dob": "2004-06-20",
+      "gender": "male",
+      "email": "chinhpd5@fpt.edu.vn",
+      "password": "$2a$10$24zfo6QIQrgXP5pIMTbxYOUUpP9BGtGXZZhpnBYSyv/k1OY8XyVXu",
+      "username": "admin",
+      "id": 1
+    },
+    {
+      "dob": "2004-10-30",
+      "gender": "female",
+      "email": "chinhpd51@fpt.edu.vn",
+      "password": "$2a$10$m86I0BaxLW/7brmf4eZr8emxi7Ba.jEI81z/ShopuXfCCb7VWPeP2",
+      "username": "admin",
+      "id": 2
+    },
+    {
+      "email": "minhlvph491433@gmail.com",
+      "password": "$2a$10$Uifrfc9n.iGaffIiyeM1K.Gfk3lyq7yUF3aU0P2Wokteixxy0m/Fe",
+      "username": "minh",
+      "id": 3
+    },
+    {
+      "email": "minhlvph4914333@gmail.com",
+      "password": "$2a$10$VmK7c3dfeyquS4Tk1HTVaOnhdIvh/7fJyvNSUbDjw8xgkMWYmyAW.",
+      "username": "minh",
+      "id": 4
+    }
+  ]
+}
