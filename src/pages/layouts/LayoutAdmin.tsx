@@ -1,14 +1,19 @@
-
+import { useAuth } from "../../context/AuthContext";
 import { Link, Outlet } from "react-router-dom";
 
-function LayoutAdmin() {
+const LayoutAdmin = () => {
+  const { logout } = useAuth();
+
   return (
     <div className="d-flex flex-column vh-100">
       {/* Header */}
-      <nav className="navbar navbar-dark bg-dark px-3">
+      <nav className="navbar navbar-dark bg-dark px-3 d-flex justify-content-between">
         <Link className="navbar-brand" to="/admin">
           Admin Dashboard
         </Link>
+        <button onClick={logout} className="btn btn-danger">
+          Đăng xuất
+        </button>
       </nav>
 
       <div className="d-flex flex-grow-1">
@@ -41,6 +46,6 @@ function LayoutAdmin() {
       </footer>
     </div>
   );
-}
+};
 
 export default LayoutAdmin;
