@@ -61,7 +61,7 @@ function List() {
           </tr>
         </thead>
         <tbody>
-          {products?.map((item: IProduct, index: number) => {
+          {products.map((item: IProduct, index: number) => {
             return (
               <tr key={item.id}>
                 <th scope="row">{index + 1}</th>
