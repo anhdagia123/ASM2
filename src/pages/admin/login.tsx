@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Input } from "../../components/Input";
 import { Card, CardContent, CardHeader, CardTitle } from "../../components/Card";
 import { Button } from "../../components/button";
+import toast from "react-hot-toast";
 
 const Login = () => {
     const [username, setUsername] = useState("");
@@ -10,14 +11,30 @@ const Login = () => {
     const [error, setError] = useState("");
     const navigate = useNavigate();
 
-    const handleLogin = (e: React.FormEvent) => {
+    const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
         setError("");
 
-        if (username === "admin" && password === "admin123") {
-            navigate("/admin-dashboard");
-        } else {
-            setError("Tên đăng nhập hoặc mật khẩu không đúng.");
+        try {
+            const response = await fetch("http://localhost:3000/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ username, password }),
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.error || data.message || "Đăng nhập thất bại!");
+            }
+
+            localStorage.setItem("token", data.token); // Lưu token vào localStorage
+            toast.success("thành công")
+            navigate("/product"); // Điều hướng sau khi đăng nhập thành công
+        } catch (error) {
+            setError(error instanceof Error ? error.message : "Lỗi không xác định");
         }
     };
 

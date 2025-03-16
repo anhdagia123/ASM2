@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 interface AuthContextType {
   isAuthenticated: boolean;
-  login: (username: string, password: string) => boolean;
+  login: (username: string, password: string) => Promise<boolean>; // Trả về Promise
   logout: () => void;
 }
 
@@ -11,22 +11,39 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(
-    !!localStorage.getItem("isAdmin")
+    !!sessionStorage.getItem("authToken")
   );
   const navigate = useNavigate();
 
-  const login = (username: string, password: string) => {
-    if (username === "admin" && password === "admin123") {
-      localStorage.setItem("isAdmin", "true");
+  // Hàm đăng nhập
+  const login = async (username: string, password: string): Promise<boolean> => {
+    try {
+      const response = await fetch("http://localhost:3000/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.error || "Đăng nhập thất bại!");
+      }
+
+      sessionStorage.setItem("authToken", data.token);
       setIsAuthenticated(true);
       navigate("/admin");
       return true;
+    } catch (error) {
+      console.error("Lỗi đăng nhập:", error);
+      return false;
     }
-    return false;
   };
 
+  // Hàm đăng xuất
   const logout = () => {
-    localStorage.removeItem("isAdmin");
+    sessionStorage.removeItem("authToken");
     setIsAuthenticated(false);
     navigate("/login");
   };
